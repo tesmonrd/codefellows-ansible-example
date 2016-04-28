@@ -38,14 +38,14 @@
   environment:
     DATABASE_URL: "{{ db_url }}"
   django_manage:
-    app_path: "{{ django_home }}"
-    settings: mysite.production
+    app_path: "{{ django_home }}/imagersite"
+    settings: manage.py
     command: migrate
 
 - name: Collect Static Files
   environment:
     DATABASE_URL: "{{ db_url }}"
   django_manage:
-    app_path: "{{ django_home }}"
-    settings: mysite.production
+    app_path: "{{ django_home }}/imagersite"
+    settings: manage.py
     command: collectstatic
