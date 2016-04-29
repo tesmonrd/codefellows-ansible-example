@@ -22,6 +22,6 @@
               proxy_set_header X-Real-IP $remote_addr;
               proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             }
-          - location /static/ { alias {{ django_home }}; }
-          - location /media/ { alias {{ django_media }}; }
+          - location /static/ { root {{ django_home }}/imagersite; }
+          - location /media/ { root {{ django_home }}/imagersite; }
 
