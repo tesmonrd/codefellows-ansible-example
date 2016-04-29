@@ -13,9 +13,9 @@
       nginx_sites: 
         default:
           - listen 80
-          - server_name "{{ ec2_public_dns_name }}";
-          - access_log "/var/log/nginx/django.log";
-          - client_max_body_size 512M;
+          - server_name "{{ ec2_public_dns_name }}"
+          - access_log "/var/log/nginx/django.log"
+          - client_max_body_size 512M
           - location / { 
               proxy_pass http://127.0.0.1:8000;
               proxy_set_header Host $host;
