@@ -14,7 +14,7 @@
     - git
 
 - name: Clone Django Repository
-  git: repo=https://github.com/cewing/djangoblog_uwpce.git dest={{ django_home }} force=yes
+  git: repo=https://github.com/tesmonrd/django-imager/tree/deploy dest={{ django_home }} force=yes
 
 - name: Install Python Dependencies
   sudo: yes
